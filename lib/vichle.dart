@@ -3,33 +3,25 @@ import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_admob/flutter_native_admob.dart';
 import 'package:flutter_native_admob/native_admob_controller.dart';
-
 import 'admob.dart';
 import 'adsManger.dart';
 
 class v1 extends StatefulWidget {
-
   @override
   _v1State createState() => _v1State();
 }
 
 class _v1State extends State<v1> {
   String img;
-
   String txt;
-
   String txt2;
-
   String txt3;
-
   String txt4;
 
 
-  final _nativeAd=NativeAdmobController();
-
-  AdmobBannerSize bannerSize;
-
-  AdmobInterstitial intersitialAd;
+   final _nativeAd=NativeAdmobController();
+ AdmobBannerSize bannerSize;
+ AdmobInterstitial intersitialAd;
   String testDevice = 'Mobile_id';
   Customadmob myCustomadmob=Customadmob();
 
@@ -37,7 +29,7 @@ class _v1State extends State<v1> {
   void initState() {
     showInterstialAd();
     super.initState();
-    intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
+   intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
         listener:(AdmobAdEvent event , Map<String, dynamic> args ){
           if(event==AdmobAdEvent.closed) intersitialAd.load();
         } );
@@ -159,15 +151,15 @@ class _v1State extends State<v1> {
         children: <Widget>[
           Column(
             children: <Widget>[
-              Container(
-                  width:200,
-                  height:60,
-                  child:NativeAdmob(
-                    adUnitID:AdsManger.nativeAdunit,
-                    numberAds:3,
-                    controller: _nativeAd,
-                    type:NativeAdmobType.banner,
-                  )
+               Container(
+            width:200,
+               height:60,
+             child:NativeAdmob(
+                 adUnitID:AdsManger.nativeAdunit,
+                  numberAds:3,
+                  controller: _nativeAd,
+                type:NativeAdmobType.banner,
+               )
               ),
               SizedBox(
                   height:5

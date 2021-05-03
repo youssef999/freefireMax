@@ -15,16 +15,16 @@ class d1 extends StatefulWidget {
 
 class _MyApp7State extends State<d1> {
 
-  final _nativeAd=NativeAdmobController();
+ final _nativeAd=NativeAdmobController();
 
-  AdmobBannerSize bannerSize;
+ AdmobBannerSize bannerSize;
 
   AdmobInterstitial intersitialAd;
 
   @override
   void initState() {
     super.initState();
-    intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
+ intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
         listener:(AdmobAdEvent event , Map<String, dynamic> args ){
           if(event==AdmobAdEvent.closed) intersitialAd.load();
         } );
@@ -36,7 +36,7 @@ class _MyApp7State extends State<d1> {
   @override
   void dispose() {
     intersitialAd.dispose();
-    _nativeAd.dispose();
+ _nativeAd.dispose();
     super.dispose();
 
   }

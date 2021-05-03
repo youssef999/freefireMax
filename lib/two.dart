@@ -20,7 +20,7 @@ class _MyApp7State extends State<two> {
 
 
 
-  final _nativeAd=NativeAdmobController();
+ final _nativeAd=NativeAdmobController();
 
   AdmobBannerSize bannerSize;
 
@@ -29,7 +29,7 @@ class _MyApp7State extends State<two> {
   @override
   void initState() {
     super.initState();
-    intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
+ intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
         listener:(AdmobAdEvent event , Map<String, dynamic> args ){
           if(event==AdmobAdEvent.closed) intersitialAd.load();
         } );
@@ -39,14 +39,14 @@ class _MyApp7State extends State<two> {
 
   @override
   void dispose() {
-    intersitialAd.dispose();
+   intersitialAd.dispose();
     _nativeAd.dispose();
     super.dispose();
 
   }
   @override
   Widget build(BuildContext context) {
-   // final name=basename(widget.file.path);
+  //final name=basename(widget.file.path);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

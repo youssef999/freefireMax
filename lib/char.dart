@@ -23,11 +23,11 @@ class _charState extends State<char> {
     String txt3;
 
     String txt4;
-    final _nativeAd=NativeAdmobController();
+   final _nativeAd=NativeAdmobController();
 
     AdmobBannerSize bannerSize;
 
-    AdmobInterstitial intersitialAd;
+   AdmobInterstitial intersitialAd;
     String testDevice = 'Mobile_id';
     Customadmob myCustomadmob=Customadmob();
 
@@ -35,7 +35,7 @@ class _charState extends State<char> {
     void initState() {
       showInterstialAd();
       super.initState();
-      intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
+     intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
           listener:(AdmobAdEvent event , Map<String, dynamic> args ){
             if(event==AdmobAdEvent.closed) intersitialAd.load();
           } );

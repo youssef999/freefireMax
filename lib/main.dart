@@ -63,8 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void dispose() {
-    intersitialAd.dispose();
-    _nativeAd.dispose();
+ intersitialAd.dispose();
+   _nativeAd.dispose();
     super.dispose();
   }
   showInterstialAd(){
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           //crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+           Container(
                 width:180,
                 height:56,
                 child:NativeAdmob(
@@ -726,15 +726,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
 
-            Container(
+          Container(
                 child:AdmobBanner(
                   adUnitId:AdsManger.BannerAdUnitIdEX,
                   adSize:AdmobBannerSize.SMART_BANNER(context),
                 )
 
             ),
-
-
 
 
           ],

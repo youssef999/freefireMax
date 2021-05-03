@@ -29,7 +29,7 @@ class _weaponsState extends State<weapons> {
   void initState() {
     showInterstialAd();
     super.initState();
-    intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
+   intersitialAd =AdmobInterstitial(adUnitId: AdsManger.interstitialAd,
         listener:(AdmobAdEvent event , Map<String, dynamic> args ){
           if(event==AdmobAdEvent.closed) intersitialAd.load();
         } );
@@ -39,8 +39,8 @@ class _weaponsState extends State<weapons> {
 
   @override
   void dispose() {
-    intersitialAd.dispose();
-    _nativeAd.dispose();
+     intersitialAd.dispose();
+     _nativeAd.dispose();
     super.dispose();
 
   }
@@ -135,7 +135,7 @@ class _weaponsState extends State<weapons> {
     return ListView(
 
         children: <Widget>[
-          Container(
+         Container(
               width:200,
               height:60,
               child:NativeAdmob(
