@@ -731,7 +731,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   adUnitId:AdsManger.BannerAdUnitIdEX,
                   adSize:AdmobBannerSize.SMART_BANNER(context),
                 )
-
             ),
 
 
